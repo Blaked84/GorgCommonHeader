@@ -1,5 +1,13 @@
 %section.pam.center.mw1140p
   %h1 Administration
+  %h2 Sites
+  .grid-4-small-1
+    - if can? :manage, :admin
+      =link_to  sites_path, class:'box box-light shadow-1 mtm bouton bouton-light'  do
+        %i.zmdi.zmdi-wrench
+        %div.small-inbl
+          Annuaire des sites
+  %h2 Général
   .grid-4-small-1
     - if can? :manage, :admin
       =link_to admin_configurable_path, class:'box box-light shadow-1 mtm bouton bouton-light'  do

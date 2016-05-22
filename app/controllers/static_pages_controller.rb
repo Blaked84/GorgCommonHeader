@@ -3,12 +3,12 @@ class StaticPagesController < ApplicationController
   end
 
   def common_header
-  	@sites = Site.all
+  	@sites = Site.all.order(:order)
   	render layout: false
   end
 
   def common_apps_list
-  	@sites = Site.all
+  	@sites = Site.all.order(:order)
   	render layout: false
   end
 end

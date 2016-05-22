@@ -8,6 +8,7 @@
     = f.input :description
     = image_tag(@site.logo_url) if @site.logo?
     = f.file_field  :logo
+    = f.input  :order
 
   .form-actions
     = f.button :submit

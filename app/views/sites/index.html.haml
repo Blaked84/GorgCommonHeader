@@ -3,23 +3,25 @@
 %table
   %thead
     %tr
+      %th order
       %th Name
       %th Name short
       %th Url
-      %th
       %th
       %th
 
   %tbody
     - @sites.each do |site|
       %tr
+        %td= site.order
         %td= site.name
         %td= site.name_short
         %td= site.url
         %td= site.description
-        %td= link_to 'Show', site
-        %td= link_to 'Edit', edit_site_path(site)
-        %td= link_to 'Destroy', site, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td
+          = link_to 'Show', site
+          = link_to 'Edit', edit_site_path(site)
+          = link_to 'Destroy', site, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
