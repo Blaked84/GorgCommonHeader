@@ -12,4 +12,5 @@ Rails.application.config.assets.version = '1.0'
 
 ## Assets pour Slack-Chat
 Rails.application.config.assets.precompile += %w( slack-chat.min.js slack-chat.css slack-chat-custom.css slack-chat-caller.js)
-
+Rails.application.config.assets.precompile += %w( header.css )
+Rails.application.config.assets.precompile += %w( autoload/knacss.css )

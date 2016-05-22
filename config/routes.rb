@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :sites
   get 'admin/index'
   
   devise_for :users, :controllers => {
@@ -16,6 +17,9 @@ Rails.application.routes.draw do
 
   get 'admin' => 'admin#index'
   get 'roles' => 'roles#index'
+  get 'commun_header ' => 'static_pages#common_header'
+  get 'static_pages/common_header'
+  get 'static_pages/common_apps_list'
 
   resources :users do
 
@@ -27,6 +31,8 @@ Rails.application.routes.draw do
 
 
   end
+
+  resources :sites
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
