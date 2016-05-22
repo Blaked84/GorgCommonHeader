@@ -1,0 +1,13 @@
+= simple_form_for(@site) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :name_short
+    = f.input :url
+    = f.input :description
+    = image_tag(@site.logo_url) if @site.logo?
+    = f.file_field  :logo
+
+  .form-actions
+    = f.button :submit

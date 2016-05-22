@@ -1,0 +1,108 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+header {
+	height: 75px;
+}
+
+#module, #module > * {
+	height: 75px;
+}
+
+.left { float: left}
+.right { float: right}
+
+ nav {
+    background: #fff;
+    height: 90px;
+    border-bottom: 1px solid #F2F2F2;
+}
+.menu {
+    float: right;
+    /*margin-right: 45px;*/
+}
+.menu ul{list-style: outside none none;
+    margin: 0px;
+    padding-left: 0px;
+}
+.menu li{
+    float: left;
+    width: 210px;
+    height: 90px;
+    border-right: 1px solid #F2F2F2;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    line-height: 90px;
+}
+.menu li *{text-decoration: none;}
+.menu li:last-child{
+    border-right: none;
+}
+.menu li.with_button{
+    line-height: inherit;
+}
+.menu a:hover{
+    color: #8E2463;
+}
+
+.menu * {
+    transition: all 0.4s ease 0s;
+}
+.black_menu {background: #333;}
+
+li.common_apps_list{
+    position: relative;
+    text-align:right;
+    line-height:90px;
+}
+li.common_apps_list ul.common_apps_block{
+    width: 900px;
+    display:block;
+    position: absolute;
+    right: 0px;
+    top:89px;
+    background-color:white;
+    height:0px;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1)
+}
+li.common_apps_list:hover ul.common_apps_block{
+    height:auto;
+}
+ul.common_apps_block a ul.common_apps_block > *{
+    border-top: 1px solid #F2F2F2;
+    display: block;
+    height: 45px;
+    line-height: 45px;
+    font-size:0.8em;
+    text-align:center;
+}
+
+.common_apps_block {
+	box-shadow: 0px 8px 17px 0px rgba(0, 0, 0, 0.2), 0px 6px 20px 0px rgba(0, 0, 0, 0.19);
+}
+
+.common_link {
+	width: 50%;}
+.common_description {
+	font-size: 70%;
+	color: #666;
+	width: 50%;
+}
+
+
+#logo{
+    display: inline;
+    height: 50px;
+    width: 210px;
+    padding-top: 20px;
+padding-left: 45px;
+}
+
+.vertical-center{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}

@@ -1,0 +1,15 @@
+%li.common_apps_list
+  Liste des sites
+  %ul.common_apps_block
+    .grid-2-small-1
+      -@sites.each do |s|
+        .common_site.pam
+          .common_link.left
+            -if s.logo?
+              =link_to image_tag(s.logo_url), s.url
+            -else
+              =link_to s.name, s.url
+
+            
+          .common_description.right
+            =s.description

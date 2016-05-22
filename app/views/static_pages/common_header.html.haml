@@ -1,0 +1,19 @@
+%html
+  %head
+    /= stylesheet_link_tag    "autoload/knacss", media: "all"
+    = stylesheet_link_tag    "header", media: "all"
+    = stylesheet_link_tag    "application", media: "all"
+
+%header
+  %nav
+    .left
+      #module
+        =image_tag "module-ALUMNI.png", :class => "vertical-center"
+    
+    #logo.left
+      =link_to root_path do
+        =image_tag "logo_alumni.png", :class => "vertical-center"
+    .menu
+      %ul
+        = render 'layouts/apps_directory'
+        %li.black_menu

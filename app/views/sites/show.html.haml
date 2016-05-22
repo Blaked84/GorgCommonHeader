@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @site.name
+%p
+  %b Name short:
+  = @site.name_short
+%p
+  %b Url:
+  = @site.url
+%p
+  %b Description:
+  = @site.description
+
+%p= image_tag(@site.logo_url) if @site.logo?
+
+
+= link_to 'Edit', edit_site_path(@site)
+\|
+= link_to 'Back', sites_path
