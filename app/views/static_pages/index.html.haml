@@ -1,45 +1,30 @@
 %section.pam
-  %h1 Titre
+  %h1 Header commun
+
+  %h2 Comment intéger le header commun dans mon site ?
+
+  %p Si tu n'utilises pas déjà jQuery, importe-le:
 
 
-  .grid-2-small-1
-    .box.box-light.shadow-1.mtm
-      .box-top.box-top-color.pam
-        Box 1
-      .box-bottom.pam
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  %pre
+    %code.javascript            
+      #{'<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="  crossorigin="anonymous"></script>'}
 
+  %p Il suffit de copier le code si dessous dans la page:
 
-    .box.box-light.shadow-1.mtm
-      .box-top.box-top-color.pam
-        Box 2
-      .box-bottom.pam
-        / il faut mettre une largeur pour tous les element pour que l'affichage se fasse bien
-        .group.group-m-form  
-          =text_field_tag "Name",nil, :class => "w100"
-          .span.highlight.w100
-          .span.bar.w100
-          =label_tag "Name"
+  %pre
+    %code.javascript            
+      #{'<script type="text/javascript">$(document).ready(function(){$("#common_header").load("http://localhost:3000/static_pages/common_header");})</script>'}
+  %p Puis d'ajouter un div avec l'id common_header là où on souhaite avoir le de header
+  %pre
+    %code.html          
+      #{'<div id="common_header"><div>'}
 
-        .group.group-m-form  
-          =text_field_tag "Name",nil, :class => "w50"
-          .span.highlight.w50
-          .span.bar.w50
-          =label_tag "Name"
+  %p Et voilà ! Tu peux voir un exemple sur la  #{link_to "page de test", "test_page.html"}
 
-        .group.group-m-form  
-          =text_field_tag "input2",nil, :class => "login w100"
-          .span.highlight.w100
-          .span.bar.w100
-          =label_tag "special input"
+  %h2 Comment recupérer uniquement la liste des sites ?
+  %p Avec l'API ! Il te suffit d'aller sur 
 
-        =submit_tag 'Ok !',:class => "bouton bouton_bleu", :id => "button_loading"
-        .mtm=submit_tag 'Disabled',:class => "bouton bouton_bleu", :id => "button_loading", :disabled => true
-
-      
-    / <div class="group">      
-    /   <input type="text" required>
-    /   <span class="highlight"></span>
-    /   <span class="bar"></span>
-    /   <label>Email</label>
-    / </div>
+  %pre
+    %code.html          
+      #{Configurable[:site_url] + 'sites.json'}

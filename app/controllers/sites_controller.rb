@@ -4,7 +4,6 @@ class SitesController < ApplicationController
   # GET /sites
   # GET /sites.json
   def index
-    authorize! :read, :admin
     @sites = Site.all
   end
 

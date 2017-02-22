@@ -77,6 +77,8 @@ gem 'bootstrap-tooltip-rails'
 # upload files
 gem 'carrierwave'
 
+gem 'highlight_js-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

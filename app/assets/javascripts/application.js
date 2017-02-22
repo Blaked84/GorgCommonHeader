@@ -20,6 +20,8 @@
 //= require admin
 //= require_tree ./autoload
 
+// load hilightjs
+hljs.initHighlightingOnLoad();
 
 
 UnobtrusiveFlash.flashOptions['timeout'] = 5000; // milliseconds
